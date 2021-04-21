@@ -20,6 +20,7 @@ class CrossValidation:
         self.multilabel_delimiter = os.environ.get('MULTI_DELIMITER')
         self.num_targets = len(self.target_cols)
         self.save_path = os.environ.get('SAVE_PATH')
+        self.holdout = os.environ.get('HOLDOUT')
 
         if(self.shuffle):
             self.df = self.df.sample(frac=1).reset_index(drop=True)
